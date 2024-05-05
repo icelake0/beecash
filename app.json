@@ -1,0 +1,82 @@
+{
+  "expo": {
+    "name": "Beecash",
+    "slug": "beecash",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "config": {
+        "usesNonExemptEncryption": false
+      },
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "This app will authenticate using device faceID."
+      },
+      "bundleIdentifier": "com.stizzle.beecash",
+      "buildNumber": "9",
+      "splash": {
+        "image": "./assets/logo-splash.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#ffffff",
+        "dark": {
+          "backgroundColor": "#000000",
+          "image": "./assets/logo-splash-dark.png",
+          "resizeMode": "contain"
+        }
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": ["android.permission.NFC"],
+      "package": "com.stizzle.beecash",
+      "splash": {
+        "image": "./assets/logo-splash.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#ffffff",
+        "dark": {
+          "backgroundColor": "#000000",
+          "image": "./assets/logo-splash-dark.png",
+          "resizeMode": "contain"
+        }
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "react-native-nfc-manager",
+      "expo-font",
+      "expo-router",
+      [
+        "expo-secure-store",
+        {
+          "faceIDPermission": "Allow $(PRODUCT_NAME) to access your Face ID biometric data."
+        }
+      ],
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "Allow $(PRODUCT_NAME) to use Face ID."
+        }
+      ]
+    ],
+    "scheme": "beecash",
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "e1b26979-dbd8-4cef-9af5-4d0ff2ccfcc0"
+      }
+    },
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
